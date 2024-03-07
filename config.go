@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type Config struct {
 	Port       string
 	DBUser     string
@@ -17,7 +15,7 @@ func initConfig() Config {
 		Port:       getEnv("PORT", "8080"),
 		DBUser:     getEnv("DB_USER", "root"),
 		DBPassword: getEnv("DB_PASSWORD", "password"),
-		DBAdress:   fmt.SSprintf()
+		// DBAdress:   fmt.SSprintf()
 	}
 }
 
