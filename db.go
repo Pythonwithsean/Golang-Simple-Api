@@ -3,16 +3,14 @@ package main
 import (
 	"database/sql"
 	"log"
-
-	"github.com/go-sql-driver/mysql"
 )
 
 type MySQLStorage struct {
 	db *sql.DB
 }
 
-func NewMySQLStroeage(cfg mysql.Config) *MySQLStorage {
-	db, err := sql.Open("mysql", cfg.FormatDSN())
+func NewMySQLStroeage() *MySQLStorage {
+	db, err := sql.Open("mysql", "root:password@tcp(mysql-container:3306)/mydatabase")
 	if err != nil {
 		log.Fatal(err)
 	}
