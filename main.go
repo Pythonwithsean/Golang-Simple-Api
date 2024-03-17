@@ -7,7 +7,7 @@ import (
 func main() {
 
 
-	sqlStorage := NewMySQLStroeage()
+	sqlStorage := NewMySQLStorage()
 	db, err := sqlStorage.Init()
 	if err != nil {
 		log.Fatal(err)

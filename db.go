@@ -9,8 +9,8 @@ type MySQLStorage struct {
 	db *sql.DB
 }
 
-func NewMySQLStroeage() *MySQLStorage {
-	db, err := sql.Open("mysql", "root:password@tcp(mysql-container:3306)/mydatabase")
+func NewMySQLStorage() *MySQLStorage {
+	db, err := sql.Open("mysql", "root:password@tcp golang-sql-app:3306/mydatabase")
 	if err != nil {
 		log.Fatal(err)
 	}
